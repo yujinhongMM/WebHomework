@@ -1,0 +1,42 @@
+html, body, h1 {
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  font-family: cursive;
+  font-size: 1.2em;
+  text-align: center;
+  background-image: url(../images/bg.jpg);
+  background-size: cover;
+}
+h1{
+  margin-bottom: 2em;
+}
+
+a{
+  text-decoration: none;
+}
+
+.btn {
+	display: inline-block;
+	padding: 10px 20px;
+	color: #fff;
+	border: 5px solid #8ebbd7;
+	border-radius: 25px;
+	-webkit-transition: color 0.2s ease,background-color 0.2s ease;
+	transition: color 0.2s ease,background-color 0.2 ease;
+}
+.btn:hover {
+  color: grey;
+  background-color: #fff;
+}

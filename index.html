@@ -1,0 +1,156 @@
+<!DOCTYPE  HTML>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/black.css">
+    <script type="text/javascript" src="js/index1.js"></script>
+  </head>
+  <body>
+    <div id="pagewrap">
+        <a name="top1"></a>
+      <div id="top">
+        <div class="top_m">
+          <!--导航栏-->
+            <ul>
+                <li><a href="#">html</a>
+                  <ul>
+                      <li><a href="html/shoucang.html">我的收藏</a></li>
+                      <li><a href="html/yujinhong.html">我的简历</a></li>
+                      <li><a href="html/table.html">我的表格</a></li>
+                  </ul>
+                </li>
+                <li><a href="#">CSS</a>
+                  <ul>
+                      <li><a href="html/login.html">登录界面</a></li>
+                      <li><a href="html/bg_text_font.html">文字背景</a></li>
+                      <li><a href="html/link_list_table.html">导航链接</a></li>
+                  </ul>
+                </li>
+                <li><a href="#">javascript</a>
+					<ul>
+                      <li><a href="javascript:;" onclick="login()">js登录作业</a></li>
+                      <li><a href="javascript:;" onclick="QIMO()">期末作业</a></li>
+                      <li><a href="html/JS_Apply.html">计算器</a></li>
+					  <li><a href="html/JSZH.html">JS的综合使用</a></li>
+					</ul>
+				</li>
+				
+                
+                <!--<li><a href="#" class="top_m_2">更多(二级菜单)</a>
+                  <ul>
+                    <li><a href="#">暂无</a></li>
+                    <li><a href="#">暂无</a></li>
+                    <li><a href="#">暂无</a></li>
+                    <li><a href="#">暂无</a></li>
+                  </ul>
+                </li>-->
+            </ul>
+            <input type="file" id="btn_file" style="display:none;" onchange="showPicture(this)"/>
+            <div class="top_m_i_th_m">
+                <div id="top_m_i_th">
+                      <div id="top_m_i_h">下午好，哈哈哈！</div>
+                      <div id="top_m_i_t">2017年11月8日&nbsp;星期三&nbsp;08:08</div>
+                </div>
+                <a title="更换头像" onclick="F_Open_dialog()" class="top_m_i M_M"></a>
+            </div>
+            <div class="clear"></div>
+        </div>
+      </div>
+      <div class="explain">
+          <div class="explain_skin">点击换肤→</div>
+          <ul id="skin">
+            <li id="pink" tilte="粉红" title="换肤">粉红</li>
+            <li id="black" class="current" tilte="黑色" title="换肤">黑</li>
+          </ul>
+          <div class="clear"></div>
+      </div>
+     
+      <div class="main">
+        <!--左边区域-->
+          <div id="FixLeft">
+              <a class="touxiang M_M" title="更换头像" onclick="F_Open_dialog()"></a>
+              <div class="mingzi">YJH</div>
+              <input type="button" value="关注" id="guanzhu" onclick="aaa()">
+              <div class="geren">&nbsp;&nbsp;&nbsp;&nbsp;个人简介</div>
+              <textarea id="GRK" placeholder=""></textarea>
+          </div>
+          <!--右边区域-->
+          <div class="Right">
+              
+              <div class="Right_img1"></div>
+              <!--内容发布区域-->
+	            <div class="box">
+                  <div class="box1"><div>请自由发表你的言论</div></div>
+                  <textarea class="box2" id="box2" placeholder="" onkeyup="keypress()"></textarea>
+                  <div id="zishu">你还可以输入50个字</div>
+                  <div class="box3" id="box3" onclick="ddd()"><a href="#">发布</a></div>
+              </div>
+              <!--发布内容显示区域-->
+              <div id="dddd" class="mContent"></div>
+          </div>
+      </div>
+      <div class="clear"></div>
+      <a class="dingbu" href="#top1">到顶部</a>
+
+      <!--登录弹出框-->
+      <div id="overlay"></div>
+
+
+
+      
+      <div id="win">
+          <div class="win_top">
+              <span class="h2_2">登录</span>
+              <span onclick="Close()" class="h2_1">×</span>
+              <div class="clear"></div>
+          </div>
+          <div class="win_content">
+            <form name="#" method="post" action="#" autocomplete="off">
+                  <div>
+                      <span class="user-icon"></span>
+                      <input type="text" id="userid" name="#" placeholder="　输入账号" value="">
+                      <span><a href="#" class="user-icon1">立即注册</a></span>
+                  </div>
+                  <div>
+                      <span class="mima-icon"></span>
+                      <input type="password" id="pwd" name="#" placeholder="　输入密码" value="">
+                      <span><a href="#" class="user-icon2">忘记密码</a></span>
+                  </div>
+                  <div>
+                      <span class="yzmz-icon"></span>
+                      <input type="text" name="#" id="yzmz" placeholder="　验证码" value="" class="yzmainput">
+                      <img src="images/yanzhengma.png"/> 
+                      <span class="text3">看不清？点击更换</span> 
+                  </div>	
+              <button type="submit" onclick="Close()" id="BTNN">登 录</button>					
+            </form>
+          </div>
+      </div>
+      <div id="overlay"></div>
+	   <div id="win1">
+          <div class="win_top">
+              <span class="h2_2">期末作业</span>
+              <span onclick="Close1()" class="h2_1">×</span>
+              <div class="clear"></div>
+          </div>
+          <div class="win1_content">	
+                <h2>（1）项目题目</h2>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;兴趣社区</p>
+                <h2>（2）内容简介</h2>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;包括私信，个人中心，游戏中心，购物中心，个人空间动态，关注动态，
+                    以及个人资料的展示修改。最后还要包括以前的作业以及老师要求的那两个页面。</p>
+                <h2>（3）网站整体风格（颜色、页面排版风格等）</h2>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;网页整体风格大概使用绿色，然后分导航栏和中间三个或两个大模块。应该会采用自适应</p>
+                <h2>（4）主要技术核心、重点、难点</h2>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;核心技术有html，css以及js。难点可能在js技术，以及图像的处理等。
+                </p>
+                <h2>（5）其他特色（如：是否连接数据库等）</h2>
+                <p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;可能会考虑一些简单的后台，如登录</p>		
+          </div>
+      </div>
+      
+
+    </div>
+  </body>
+</html>
+

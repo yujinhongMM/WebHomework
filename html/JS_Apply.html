@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>计算器</title>
+		<meta charset="utf-8">
+		<style>
+			*{
+				margin:0px;
+				padding:0px;
+				text-align:center;
+			}
+			.box{
+				width:380px;
+				height:450px;
+				margin:0 auto;
+			}
+			table{
+				width:380px;
+				height:450px;
+				border:10px solid #1565c0;
+			}
+			table td{
+			 cursor:pointer;
+			}
+		.btn{
+			padding: 10px 20px;
+			font-family: cursive;
+			font-size: 25px;
+			color: #fff;
+			border-radius: 10px;
+		}
+
+		.btn:active{
+			transform: translate(0, 5px);
+			-webkit-transform: translate(0, 5px);
+			border-bottom: 1px solid;
+		}
+
+		.animate{
+			transition: all 0.1s;
+			-webkit-transition: all 0.1s;
+		}
+
+		.blue{
+			background-color: #42a5f5;
+			border-bottom: 5px solid #1565c0;
+		}
+		.red{
+			background-color: #ef5350;
+			border-bottom: 5px solid #c62828;
+		}
+		.green{
+			background-color: #9ccc65;
+			border-bottom: 5px solid #558b2f;
+		}
+		.tr1{
+			height:50px;
+		}	
+		#xianshi,#jieguo{
+			 cursor:default;
+			 border:1px solid #1565c0;
+		}
+		.box a{
+		display:block;
+		margin-top:50px;
+		text-decoration:none;
+		}
+		</style>
+		<script type="text/javascript" src="../js/JS_Apply.js"></script>
+
+	</head>
+<body>
+	<h1>计算器</h1>
+	<div class="box">
+		<table>
+		<tr class="tr1">
+			<td colspan="2" id="xianshi"></td>
+			<td id="jieguo"></td>
+			<td class="btn animate red">删除</td>
+		</tr>
+		<tr>
+			<td class="btn animate blue">1</td>
+			<td class="btn animate blue">2</td>
+			<td class="btn animate blue">3</td>
+			<td class="btn animate red">清除</td>
+		</tr>
+		<tr>
+			<td class="btn animate blue">4</td>
+			<td class="btn animate blue">5</td>
+			<td class="btn animate blue">6</td>
+			<td class="btn animate blue">0</td>
+		</tr>
+		<tr>
+			<td class="btn animate blue">7</td>
+			<td class="btn animate blue">8</td>
+			<td class="btn animate blue">9</td>
+			<td class="btn animate red">=</td>
+		</tr>
+		<tr>
+			<td class="btn animate green">+</td>
+			<td class="btn animate green">-</td>
+			<td class="btn animate green">*</td>
+			<td class="btn animate green">/</td>
+		</tr>
+		</table>
+		<a href="../index.html" class="btn animate red">返回主页</a>
+	</div>
+</body>
+</html>

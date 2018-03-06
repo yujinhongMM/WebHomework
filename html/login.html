@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>登录界面</title>
+        <link type="text/css" rel="stylesheet" href="../css/login.css">
+        <style type="text/css">
+            .zhuye{
+                    margin-top:50px; 
+                     text-align: center;
+                    font-size: 20px;
+                     color:#0F4B1D;
+                    }
+            .zhuye a{
+                    color: red;
+                    font-size: 30px;
+                    }
+        </style>
+        <script type="text/javascript" src="../js/jquery-3.2.1.min.js"></script>
+        <script type="text/javascript" src="../js/login.js"></script>
+    </head>
+    <body style="overflow:hidden">
+        <div class="pagewrap">
+            <div class="main">
+                <div class="header">
+                    <p>login</p>
+                </div>
+                <div class="content">
+                    <div class="content_top">
+                        <a class="left" href="javascript:;">联系到我</a>
+                        <a class="right" href="javascript:;">登录管理</a>
+                    </div>
+                    <ul>
+                        <li class="content_left">
+                                 <img src="../images/qq.jpg" style="width: 174px; height: 174px"/>                                    
+                            <div class="content_left_bottom">
+                                <p>QQ关注 安全便捷</p>
+                            </div>
+                        </li>
+                        <li class="content_right">
+                                <form name="#" method="post" action="../index.html" autocomplete="off">
+                                    <div class="user">
+                                        <div><span class="user-icon"></span>
+                                            <input type="text" id="userid" name="#" placeholder="　输入账号" value="">
+                                            <span><a href="" style="color:#42E297">立即注册</a></span>
+                                        </div>
+                                        <div><span class="mima-icon"></span>
+                                            <input type="password" id="pwd" name="#" placeholder="　输入密码" value="">
+                                            <span><a href="" style="color:#42E297">忘记密码</a></span>
+                                        </div>
+                                        <div><span class="yzmz-icon"></span>
+                                            <input type="text" name="#" placeholder="　验证码" value="" style=" width:150px;">
+                                            <img style="cursor: pointer; margin-top:8px;margin-left:3px;" alt="看不清？点击更换" src="../images/yanzhengma.png"/> 
+                                            <span style="cursor: pointer;margin-left:3px;color:#42E297">看不清？点击更换</span> 
+                                        </div>
+                                    </div>	
+                                    <button type="submit">登 录</button>					
+                                </form>
+                        </li>
+                    </ul>
+                </div>
+            <div class="zhuye">&copy;余金鸿&nbsp;2017.10.21&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href="../index.html">主页</a>&nbsp;&nbsp;<a href="bg_text_font.html">空间</a>&nbsp;&nbsp;<a href="link_list_table.html">我的导航作业</a></div>
+            </div>
+        </div>
+    </body>
+</html>

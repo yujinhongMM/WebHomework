@@ -1,0 +1,263 @@
+<html>
+<head>
+	<title>JS综合应用</title>
+		<meta charset="utf-8">
+		<style>
+body{
+    min-width: 1000px;
+}
+.clear{
+    clear:both;
+    height: 0;
+    line-height: 0;
+    font-size: 0;
+}
+.btn{
+    display: inline-block;
+    padding: 10px 20px;
+    font-family: cursive;
+    font-size: 25px;
+    color: #fff;
+    border-radius: 10px;
+    text-align:center;
+    width:300px;
+}
+
+.btn:active{
+    transform: translate(0, 5px);
+    -webkit-transform: translate(0, 5px);
+    border-bottom: 1px solid;
+}
+
+.animate{
+	transition: all 0.1s;
+	-webkit-transition: all 0.1s;
+}
+
+.blue{
+	background-color: #42a5f5;
+	border-bottom: 5px solid #1565c0;
+}
+.red{
+	background-color: #ef5350;
+	border-bottom: 5px solid #c62828;
+}
+.green{
+	background-color: #9ccc65;
+	border-bottom: 5px solid #558b2f;
+}
+#win{
+    position: fixed;
+    top:0;
+    left:0;
+    width: 450px; 
+    height:auto;
+    background:#fff;
+    border:2px solid green;
+    display: none;
+}
+
+.win_top{
+    height: 40px;
+    font-size:12px;
+    background:rgb(76, 235, 129);
+    border-bottom:2px solid rgb(124, 237, 180);
+    width: 97.5%;
+    min-width:440px;
+    padding:1.25%;
+}
+
+.win_top .h2_1{
+    cursor:pointer;
+    color:white;
+    background:rgb(76, 235, 187);
+    border:1px solid rgba(80, 167, 77, 0.9);
+    height:20px;
+    width: 20px;
+    margin:10px 2px;
+    float:right;
+    text-align: center;
+    line-height: 20px;
+    font-size: 20px;
+    display: block;
+}
+.win_top .h2_1:hover{
+    background:rgb(124, 237, 184);
+}
+.win_top .h2_2{
+    color:white;
+    font-size: 16px;
+    float:left;
+    margin:10px 2px;
+}
+.win_content{
+    position: relative;
+    width:100%;
+    overflow: hidden;
+    margin:30px auto 0px auto;
+    width: 300px; 
+    height:400px; 
+    background: #fff; 
+    font-size: 40px;
+}
+#time{
+    font-size: 40px;
+    margin-top:100px;
+    text-align: center;
+}       
+#daojishi{
+    position: absolute;
+    bottom:0px;
+    right:0px;
+    width: 300px;
+    height:200px;
+    line-height: 200px;
+    text-align: center;
+    color:#fff;
+    font-size: 40px;
+    border: 1px solid #c62828;
+    background: red;
+}
+#TD{
+    border-left: 1px solid #c62828;
+    border-top: 1px solid #c62828;
+    width: 200px;
+    height: auto;
+    border-collapse:collapse;
+    text-align: center; 
+
+}
+#TD td{
+    border-right:1px solid red;
+    border-bottom:1px solid red;
+    cursor:default;
+    height:30px;
+    font-size: 20px;
+}
+		</style>
+        <script type="text/javascript">
+function Open(){
+    var oWin = document.getElementById("win");	
+    oWin.style.display = "block";  	
+}
+function Close(){
+    var oWin = document.getElementById("win");
+    oWin.style.display = "none";
+}
+window.onload=function(){
+    /*时间*/
+    setInterval(getTimes,1000);
+         function getTimes(){
+             var mydate=new Date();
+             var weekday=["日","一","二","三","四","五","六"];
+             var mynum=mydate.getDay();
+             var show=mydate.getFullYear()+"年"+(mydate.getMonth()+1)+"月"
+             +mydate.getDate()+"日"+" "+"星期"+weekday[mynum]+" "+
+             format(mydate.getHours())+":"+format(mydate.getMinutes());
+             if(mydate.getHours()<12&&mydate.getHours()>=7){
+                show=show+" 早上好!";
+             }else if(mydate.getHours()<19&&mydate.getHours()>=12){
+                show=show+" 下午好";
+             }else{
+                show=show+" 晚上好";
+             }
+             document.getElementById("time").innerText=show;
+         }
+         function format(a)
+         {
+             return a.toString().replace(/^(\d)$/, "0$1")	
+         }
+
+
+    var oldBG;
+
+    var TD=document.getElementById("TD").getElementsByTagName("tr");
+
+    for(var i=0;i<TD.length;i+=2){
+        TD[i].style.background="green";
+    }
+    for(var j=1;j<TD.length;j+=2){
+        TD[j].style.background="gray";
+    }
+    for(var k=0;k<TD.length;k++){
+        TD[k].onmouseover=function(){
+            oldBG=this.style.background;
+            this.style.background="red";
+        }
+        TD[k].onmouseout=function(){
+           this.style.background=oldBG;
+        }
+    }
+    //倒计时
+    var num=60;
+    setInterval(countdown,1000);
+    var daojishi=document.getElementById("daojishi");
+    function countdown(){
+        num--;
+        daojishi.innerHTML=num+"s跳转到主页"
+        if(num<=0){
+            window.location.href="../index.html";
+        }
+    }
+
+}
+
+        </script>
+
+	</head>
+<body>
+    <div class="btn animate red" onclick="Open()">点击显示广告</div>
+    <a href="../index.html"><div class="btn animate red">点击立即返回主页</div></a>
+      <div id="win">
+          <div class="win_top">
+              <span class="h2_2">广告的隐藏和显示</span>
+              <span onclick="Close()" class="h2_1">×</span>
+              <div class="clear"></div>
+          </div>
+          <div class="win_content">广告</div>
+      </div>
+	  
+      <div id="time">2017年11月8日&nbsp;星期三&nbsp;08:08</div>
+      <table id="TD">
+          <tr>
+                <td>表</td><td>鼠</td> 
+          </tr>
+          <tr>
+                <td>格</td><td>标</td>
+          </tr>
+          <tr>
+                <td>隔</td><td>移</td>
+          </tr>
+          <tr>
+                <td>行</td><td>进</td>
+          </tr>
+          <tr>
+                <td>变</td><td>移</td>
+          </tr>
+          <tr>
+                <td>色</td><td>出</td>
+          </tr>
+          <tr>
+                <td></td><td>效</td>
+          </tr>
+          <tr>
+                <td></td><td>果</td>
+          </tr>
+          <tr>
+                <td></td><td></td>
+          </tr>
+          <tr>
+                <td></td><td></td>
+          </tr>
+          <tr>
+                <td></td><td></td>
+          </tr>
+          <tr>
+                <td></td><td></td>
+          </tr> 
+      </table>
+      <div id="daojishi">
+        60S后返回主页
+      </div>
+</body>
+</html>

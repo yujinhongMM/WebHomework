@@ -1,0 +1,64 @@
+*{margin: 0px;padding:0px;}
+body{background: #9EDEE0; font-size: 9pt; font-family:cursive, Arial,Helvetica, Tahoma, STXihei, "华文细黑", Heiti, "黑体", "Microsoft YaHei", "微软雅黑", SimSun, "宋体", sans-serif; min-width: 750pt; }
+img { border: 0; vertical-align: top; }
+textarea { resize: none; }
+a, button, input, select, textarea { outline: 0; }
+a, button { cursor: pointer; }
+a { color: #666; text-decoration: none; }
+button { border: none;}
+.pagewrap{
+    background: url(../images/login_bg.jpg) top center no-repeat;
+}
+.main{
+    position: relative; margin: 0 auto; width: 990px; height: 800px;
+}
+.header{
+    padding: 60px 0 0; height: 67px; 
+}
+.header p{
+    color:#9EDEE0;
+    font-size: 50px;
+    text-align: center;
+}
+.content{
+    overflow: hidden;margin:0px auto;margin-top:50px;  width: 28pc; height: 398px; border: 1px solid #dedede; background: #fff; 
+}
+.content .content_top{
+    padding: 0 0 0 39px; width: 409px; height: 110px; border-top: 8px solid #86EEA5; 
+}
+.content .content_top .left,.content .content_top .right{
+    float: left; padding: 35px 0 0; width: 186px; height: 35px; text-align: center; text-decoration: none; font-size: 18px; font-family: "华文细黑";
+}
+.content .content_top .left{
+    border-bottom: 2px solid #CBF1BC; color: #B7F1B2; 
+}
+.content .content_top .right{
+    border-bottom: 2px solid #4BFA00; color: #95FC8C; 
+}
+.content .content_left{
+    display: none;
+    text-align: center;
+}
+.content .content_left .content_left_bottom{
+    height: 50px;margin:20px;text-align: center; text-decoration: none; font-size: 22px; font-family: "华文细黑";color:#26EE14; 
+}
+.content .content_right{
+    display: block;
+}
+.content_right .user{
+    padding: 0 0 0 39px; 
+}
+.content_right .user .user-icon{
+    float: left; width: 36px; height: 35px; background: url(../images/user-icon.png) left top no-repeat; 
+}
+.content_right .user .mima-icon{
+    float: left; width: 36px; height: 35px; background: url(../images/mima-icon.png) left top no-repeat; 
+}
+.content_right .user .yzmz-icon{
+    float: left; width: 36px; height: 35px; background: url(../images/yzmz-icon.png) left top no-repeat; 
+}
+
+
+.content_right .user input { margin: 0 0 21px -1px; padding-left: 7px;
+     width: 270px; height: 33px; border: 1px solid #dedede; color: #999; font-size: 14px; font-family: "华文细黑"; line-height: 2pc; }
+.content_right button{ margin: 0 0 0 75pt; width: 250px; height: 44px; background: #1FB945; color: #fff; font-size: 1pc; font-family: "华文细黑"; }
